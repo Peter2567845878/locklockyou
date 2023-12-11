@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的地理位置用于定位功能"
+    }
+  },
+  "window": {
+    "navigationBarTitleText": "微信小程序"
+  }
+}
