@@ -1,13 +1,10 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/home"
   ],
-  "permission": {
-    "scope.userLocation": {
-      "desc": "获取您的地理位置用于定位功能"
-    }
-  },
-  "window": {
-    "navigationBarTitleText": "微信小程序"
+  "window":{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "自行车智能锁",
+    "navigationBarTextStyle":"black"
   }
 }

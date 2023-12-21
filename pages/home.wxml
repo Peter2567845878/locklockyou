@@ -1,0 +1,18 @@
+<view>
+  <view class="maincontainer" style="{{pairing?'filter: blur(12px)':''}}">
+    <view class="title">自行车智能锁</view>
+    <button type="primary" plain="true" bindtap="pair" disabled="{{!bleWorking}}">{{hashistory?"重配对":"配对"}}</button>
+    <button type="primary" plain="true" bindtap="unlock" disabled="{{!(bleWorking&&bleConnected)}}">开锁</button>
+    <button type="{{alarming?'warn':'primary'}}" plain="true" bindtap="findcar" disabled="{{!(bleWorking&&bleConnected)}}">{{alarming?"停止找车":"找车"}}</button>
+  </view>
+  <view class="newpaircontainer" style="{{pairing?'':'display:none'}}"><view class="newpair">
+    <view class="listtitle">可配对列表</view>
+    <view class="locklist">
+      <button type="default" class="blelist" wx:for="{{bleList}}" 
+              wx:key="key" id="{{index}}" bindtap="bleselect" 
+              style="{{pariSelected==index?'background-color: rgba(200, 200, 200, 0.5);':''}}"
+      >{{item.name}}</button> 
+    </view>
+    <button type="primary" plain="true" class="pairbutton" disabled="{{pariSelected==-1}}" bindtap="dopair">配对</button> 
+  </view></view>
+</view>

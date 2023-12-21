@@ -1,8 +1,0 @@
-<view class="container">
-  <view class="title">蓝牙开锁</view>
-  <button class="pair-btn" bindtap="pairDevice">配对</button>
-  <view class="status">{{isPaired ? '设备已配对' : '设备未配对'}}</view>
-  <button class="unlock-btn" bindtap="unlockDevice" disabled="{{!isPaired}}">开锁</button>
-  <view class="unlock-status">{{isUnlocked ? '已开锁' : '未开锁'}}</view>
-  <button class="find-car-btn" bindtap="findCar" disabled="{{!isPaired}}">找车</button>
-</view>
